@@ -1,0 +1,50 @@
+{
+  "src": "src",
+  "dest": "assets",
+  "minimizeCSS": true,
+  "minimizeJS": true,
+  "linters": false,
+  "webp": false,
+  "styles": {
+    "bundle": "style",
+    "src": "styles",
+    "dest": "css",
+    "extension": "scss"
+  },
+  "scripts": {
+    "bundle": "app",
+    "src": "js",
+    "dest": "js",
+    "extension": "js",
+    "static": false
+  },
+  "templates": {
+    "src": "views",
+    "dest": "./",
+    "extension": "html",
+    "dynamic": true
+  },
+  "static": {
+    "fonts": {
+      "src": "fonts"
+    },
+    "js": {
+      "src": "js/jquery",
+      "dest": "js"
+    },
+    "images": {
+      "src": "images"
+    }
+  },
+  "browsersync": {
+    "watch": true,
+    "files": [
+      "*.html"
+    ],
+    "server": {
+      "baseDir": "../",
+      "index": "index.html",
+      "directory": true
+    }
+  }
+}
