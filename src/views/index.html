@@ -2,18 +2,23 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <!-- page title -->
-  <title>Project title</title>
+  <title>Rezilla</title>
   <!-- include styles -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <!-- include jQuery library -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
   <!-- include jQuery library local file if cdn link doesn't work -->
   <script>window.jQuery || document.write('<script src="js/jquery-3.7.1.min.js" defer><\/script>')</script>
   <!-- include app js file  -->
-  <script src="js/app.js" defer></script>
+  <script defer src="js/app.js"></script>
 </head>
 
 <body>
@@ -23,22 +28,841 @@
   </noscript>
   <div class="wrapper">
     <header class="header">
-      <!-- header content -->
+      <div class="header__top">
+        <div class="container">
+          <address>
+            <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.4 6.4C11.4 7.1355 11.0804 8.07187 10.5319 9.1111C9.99103 10.1358 9.26284 11.1957 8.52369 12.1606C7.78619 13.1234 7.04721 13.9794 6.49189 14.5953C6.30421 14.8034 6.13784 14.9838 6 15.1312C5.86217 14.9838 5.69579 14.8034 5.50811 14.5953C4.95279 13.9794 4.21381 13.1234 3.47631 12.1606C2.73716 11.1957 2.00897 10.1358 1.46812 9.1111C0.919585 8.07187 0.6 7.1355 0.6 6.4C0.6 3.15968 3.05355 0.6 6 0.6C8.94646 0.6 11.4 3.15968 11.4 6.4Z"
+                stroke="white" stroke-width="1.2" />
+              <path
+                d="M6.15 6.39998C6.15 6.54751 6.04697 6.59998 6 6.59998C5.95303 6.59998 5.85 6.54751 5.85 6.39998C5.85 6.25245 5.95304 6.19998 6 6.19998C6.04696 6.19998 6.15 6.25245 6.15 6.39998Z"
+                fill="#2B2B2B" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span> Rezilla, 18 Grattan St, Brooklyn</span>
+          </address>
+          <div class="header__top--details">
+            <a href="tel:+1234567890">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15.5425 1.66261L15.5161 1.64609L12.1749 0L8.56855 4.8084L10.2277 7.02078C10.1781 7.85512 9.82426 8.6423 9.23324 9.23331C8.64223 9.82432 7.85504 10.1781 7.0207 10.2278L4.80836 8.56859L0 12.1748L1.6324 15.4881L1.64613 15.5161L1.66269 15.5425C1.7498 15.6829 1.87139 15.7986 2.01588 15.8787C2.16036 15.9587 2.32295 16.0005 2.48814 16H3.3503C5.01148 16 6.6564 15.6728 8.19114 15.0371C9.72587 14.4014 11.1204 13.4696 12.295 12.295C13.4696 11.1203 14.4014 9.72584 15.0371 8.1911C15.6728 6.65636 16 5.01144 16 3.35026V2.48807C16.0005 2.32287 15.9588 2.16029 15.8787 2.0158C15.7986 1.87131 15.6829 1.74972 15.5425 1.66261ZM14.7653 3.35026C14.7653 9.64451 9.64451 14.7653 3.3503 14.7653H2.65267L1.56047 12.548L4.8086 10.1119L6.61698 11.4682H6.82276C8.05445 11.4668 9.23529 10.9769 10.1062 10.106C10.9772 9.23502 11.4671 8.05418 11.4684 6.82249V6.61671L10.1122 4.80836L12.548 1.56043L14.7653 2.65283V3.35026Z"
+                  fill="white" />
+              </svg>
+              <span>+1 206-214-2298</span>
+            </a>
+            <a href="mailto:info@example.com">
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask fill="white">
+                  <path d="M4 3.20001L8 6.00001L12 3.20001" />
+                </mask>
+                <path
+                  d="M4.68815 2.21693C4.14522 1.83688 3.39698 1.96892 3.01692 2.51186C2.63686 3.0548 2.76891 3.80303 3.31185 4.18309L4.68815 2.21693ZM8 6.00001L7.31185 6.98309C7.72503 7.27232 8.27497 7.27232 8.68815 6.98309L8 6.00001ZM12.6882 4.18309C13.2311 3.80303 13.3631 3.0548 12.9831 2.51186C12.603 1.96892 11.8548 1.83688 11.3118 2.21693L12.6882 4.18309ZM3.31185 4.18309L7.31185 6.98309L8.68815 5.01693L4.68815 2.21693L3.31185 4.18309ZM8.68815 6.98309L12.6882 4.18309L11.3118 2.21693L7.31185 5.01693L8.68815 6.98309Z"
+                  fill="white" mask="url(#path-1-inside-1_20_5)" />
+                <path
+                  d="M0.6 9.6V1.6C0.6 1.04771 1.04771 0.6 1.6 0.6H14.4C14.9523 0.6 15.4 1.04771 15.4 1.6V9.6C15.4 10.1523 14.9523 10.6 14.4 10.6H1.6C1.04771 10.6 0.6 10.1523 0.6 9.6Z"
+                  stroke="white" stroke-width="1.2" />
+              </svg>
+              <span>support@rezilla.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container">
+          <nav class="navbar">
+            <div class="navbar__menu">
+              <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Listings</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blogs</a></li>
+              </ul>
+            </div>
+            <a href="/" class="company__logo">
+              <figure>
+                <img src="images/rezilla.svg" alt="Company Logo">
+              </figure>
+              <span>Rezilla</span>
+            </a>
+            <div class="navbar__actions">
+              <ul>
+                <li><a href="#">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.5 14.5C5.5 12.0147 7.51472 10 10 10C12.4853 10 14.5 12.0147 14.5 14.5"
+                        stroke="#2B2B2B" stroke-width="1.6" stroke-linecap="round" />
+                      <path
+                        d="M9.99999 9.99998C11.4912 9.99998 12.7 8.79119 12.7 7.29998C12.7 5.80881 11.4912 4.59998 9.99999 4.59998C8.50878 4.59998 7.29999 5.80881 7.29999 7.29998C7.29999 8.79119 8.50878 9.99998 9.99999 9.99998Z"
+                        stroke="#2B2B2B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z"
+                        stroke="#2B2B2B" stroke-width="1.6" />
+                    </svg>
+                    <span>Login/Register</span></a></li>
+                <li><a href="#" class="btn btn--primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_2_3)">
+                        <path
+                          d="M23.715 9.16499L12.465 0.164989C12.332 0.0584866 12.1667 0.000457764 11.9963 0.000457764C11.8258 0.000457764 11.6605 0.0584866 11.5275 0.164989L0.2775 9.16499C0.156135 9.26236 0.0680565 9.39506 0.025468 9.54471C-0.0171205 9.69436 -0.0121105 9.85356 0.0398037 10.0002C0.091718 10.1469 0.187966 10.2738 0.315214 10.3634C0.442461 10.4529 0.594407 10.5006 0.75 10.5H2.25V23.25C2.25 23.4489 2.32902 23.6397 2.46967 23.7803C2.61032 23.921 2.80109 24 3 24H18V22.5H15V15.75C15 15.5511 14.921 15.3603 14.7803 15.2197C14.6397 15.079 14.4489 15 14.25 15H9.75C9.55109 15 9.36032 15.079 9.21967 15.2197C9.07902 15.3603 9 15.5511 9 15.75V22.5H3.75V10.5H16.5V8.99999H2.8875L12 1.70999L21.1125 8.99999H21C20.8011 8.99999 20.6103 9.07901 20.4697 9.21966C20.329 9.36031 20.25 9.55108 20.25 9.74999V14.25H21.75V10.5H23.25C23.405 10.4991 23.5558 10.4502 23.6819 10.3601C23.8079 10.27 23.903 10.143 23.9539 9.9967C24.0049 9.85037 24.0093 9.69184 23.9665 9.54291C23.9237 9.39398 23.8359 9.26195 23.715 9.16499ZM10.5 16.5H13.5V22.5H10.5V16.5Z"
+                          fill="white" />
+                        <path
+                          d="M18.75 19.9425L17.7825 18.975L16.725 20.0325L18.225 21.5325C18.3655 21.6722 18.5556 21.7506 18.7537 21.7506C18.9519 21.7506 19.142 21.6722 19.2825 21.5325L23.7825 17.0325L22.725 15.975L18.75 19.9425Z"
+                          fill="white" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_2_3">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span>Add Listing</span></a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="hamburger-menu">
+            <button aria-label="Toggle navigation" type="button">
+              <span class="hamburger-icon"></span>
+              <span class="hamburger-icon"></span>
+              <span class="hamburger-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
     </header>
     <div class="page-holder">
       <main class="main" id="main">
-        <h1>Home page</h1>
-        <img src="images/test.jpg" alt="" />
-        <img src="images/test.png" alt="" />
-        <img src="images/test.svg" alt="" />
-        <i class="icon-chevron-left"></i>
-        <i class="icon-chevron-up"></i>
-        <i class="icon-chevron-right"></i>
-        <i class="icon-chevron-down"></i>
+        <section class="hero">
+          <div class="container">
+            <div class="section-title">
+              <span class="text-blue">Real Estate</span>
+              <h1>Find a perfect home you love ..!</h1>
+              <p>Etiam eget elementum elit. Aenean dignissim dapibus vestibulum. Integer a dolor eu sapien sodales
+                vulputate ac in purus.</p>
+            </div>
+            <div class="hero__tab--container">
+              <div class="hero__tab">
+                <ul class="tab">
+                  <li class="tab-item active">
+                    <a href="#">For Sale</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#">For Rent</a>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-grid">
+                    <div class="tab-pane active">
+                      <form>
+                        <label for="location-sale" class="visually-hidden">enter city:</label>
+                        <input type="text" id="location-sale" name="location-sale"
+                          placeholder="New York, San Francisco, etc" aria-label="location of desired place">
+                        <select id="property-sale" name="property-sale" aria-label="property type">
+                          <option value="" disabled selected>Select property type</option>
+                          <option value="location1">property 1</option>
+                          <option value="location2">property 2</option>
+                          <option value="location3">property 3</option>
+                        </select>
+                        <select id="property-type-sale" name="property-type-sale" aria-label="Property Type">
+                          <option value="" disabled selected>Select rooms</option>
+                          <option value="house">room 1</option>
+                          <option value="apartment">room 2</option>
+                          <option value="condo">room 123</option>
+                        </select>
+                        <button type="button" class="advanced-filter">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M12.0256 14C11.7313 14 11.4872 13.7786 11.4872 13.5116V6.34883C11.4872 6.08185 11.7313 5.86046 12.0256 5.86046C12.32 5.86046 12.5641 6.08185 12.5641 6.34883V13.5116C12.5641 13.7786 12.32 14 12.0256 14Z"
+                              fill="#3a0ca3" />
+                            <path
+                              d="M12.0256 4.23256C11.7313 4.23256 11.4872 4.01116 11.4872 3.74419V0.488372C11.4872 0.221395 11.7313 0 12.0256 0C12.32 0 12.5641 0.221395 12.5641 0.488372V3.74419C12.5641 4.01116 12.32 4.23256 12.0256 4.23256Z"
+                              fill="#3a0ca3" />
+                            <path
+                              d="M7.00001 14C6.70565 14 6.46155 13.7786 6.46155 13.5116V10.2558C6.46155 9.98882 6.70565 9.76743 7.00001 9.76743C7.29437 9.76743 7.53847 9.98882 7.53847 10.2558V13.5116C7.53847 13.7786 7.29437 14 7.00001 14Z"
+                              fill="#3a0ca3" />
+                            <path
+                              d="M7.00001 8.13954C6.70565 8.13954 6.46155 7.91814 6.46155 7.65116V0.488372C6.46155 0.221395 6.70565 0 7.00001 0C7.29437 0 7.53847 0.221395 7.53847 0.488372V7.65116C7.53847 7.91814 7.29437 8.13954 7.00001 8.13954Z"
+                              fill="#3a0ca3" />
+                            <path
+                              d="M1.97434 14C1.67999 14 1.43588 13.7786 1.43588 13.5116V6.34883C1.43588 6.08185 1.67999 5.86046 1.97434 5.86046C2.2687 5.86046 2.51281 6.08185 2.51281 6.34883V13.5116C2.51281 13.7786 2.2687 14 1.97434 14Z"
+                              fill="#3a0ca3" />
+                            <path
+                              d="M1.97434 4.23256C1.67999 4.23256 1.43588 4.01116 1.43588 3.74419V0.488372C1.43588 0.221395 1.67999 0 1.97434 0C2.2687 0 2.51281 0.221395 2.51281 0.488372V3.74419C2.51281 4.01116 2.2687 4.23256 1.97434 4.23256Z"
+                              fill="#3a0ca3" />
+                            <path
+                              d="M3.41026 6.8372H0.538462C0.244103 6.8372 0 6.61581 0 6.34883C0 6.08185 0.244103 5.86046 0.538462 5.86046H3.41026C3.70462 5.86046 3.94872 6.08185 3.94872 6.34883C3.94872 6.61581 3.70462 6.8372 3.41026 6.8372Z"
+                              fill="#3a0ca3" />
+                            <path
+                              d="M13.4615 6.8372H10.5897C10.2954 6.8372 10.0513 6.61581 10.0513 6.34883C10.0513 6.08185 10.2954 5.86046 10.5897 5.86046H13.4615C13.7559 5.86046 14 6.08185 14 6.34883C14 6.61581 13.7559 6.8372 13.4615 6.8372Z"
+                              fill="#3a0ca3" />
+                            <path
+                              d="M8.43589 8.13952H5.5641C5.26974 8.13952 5.02563 7.91813 5.02563 7.65115C5.02563 7.38418 5.26974 7.16278 5.5641 7.16278H8.43589C8.73025 7.16278 8.97435 7.38418 8.97435 7.65115C8.97435 7.91813 8.73025 8.13952 8.43589 8.13952Z"
+                              fill="#3a0ca3" />
+                          </svg>
+                          <span>Advanced Search</span>
+                        </button>
+                        <button type="submit" class="btn btn--primary">
+                          <i class="icon-search"></i>
+                          <span>Search</span>
+                        </button>
+                      </form>
+                    </div>
+                    <div class="tab-pane">
+                      <form>
+                        <button type="submit">Search</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="client">
+          <div class="container">
+            <h2 class="h5">Trusted by 100+ Companies across the globe! </h2>
+            <ul>
+              <li>
+                <img src="images/google.jpg" alt="image description">
+              </li>
+              <li>
+                <img src="images/amazon.jpg" alt="image description">
+              </li>
+              <li>
+                <img src="images/logitech.jpg" alt="image description">
+              </li>
+              <li>
+                <img src="images/spotify.jpg" alt="image description">
+              </li>
+              <li>
+                <img src="images/samsung.jpg" alt="image description">
+              </li>
+              <li>
+                <img src="images/netflix.jpg" alt="image description">
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="about">
+          <div class="container">
+            <div class="section-title">
+              <span class="text-blue">WHO ARE WE</span>
+              <h2>Assisting individuals in locating the appropriate real estate.</h2>
+              <p>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. Nulla convallis ipsum
+                molestie nibh malesuada, ac malesuada leo volutpat.</p>
+            </div>
+            <div class="about__img--container">
+              <div class="about__images">
+                <div class="about__images--left">
+                  <figure class="bg-image">
+                    <img src="images/about-img1.jpg" alt="image description">
+                  </figure>
+                </div>
+                <div class="about__images--right">
+                  <figure class="bg-image">
+                    <img src="images/about-img2.jpg" alt="image description">
+                  </figure>
+                  <figure class="bg-image">
+                    <img src="images/about-img3.jpg" alt="image description">
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div class="about__cards">
+              <div class="about__card">
+                <img src="images/about-hexagon.svg" alt="iamge description">
+                <div>
+                  <h3 class="h5">Donec porttitor euismod</h3>
+                  <p>Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
+                </div>
+              </div>
+              <div class="about__card">
+                <img src="images/about-profile.svg" alt="image description">
+                <div>
+                  <h3 class="h5">Donec porttitor euismod</h3>
+                  <p>Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="listing">
+          <div class="container">
+            <div class="listing__header">
+              <div class="section-title">
+                <span class="text-blue">CHECKOUT OUR NEW</span>
+                <h2>Latest Listed Properties</h2>
+                <p>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
+              </div>
+              <ul class="listing__tab">
+                <li class="tab-btn">
+                  <a href="#">All</a>
+                </li>
+                <li class="tab-btn active">
+                  <a href="#">Sell</a>
+                </li>
+                <li class="tab-btn">
+                  <a href="#">Rent</a>
+                </li>
+              </ul>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <article class="card">
+                  <figure class="bg-image">
+                    <img src="images/tranquil-haven.jpg" alt="image description">
+                    <div class="tag tag-popular">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#FF1111" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M8.68532 7.87697C8.86705 7.57855 9.05488 7.26998 9.24041 6.95183C9.86138 5.88731 9.97534 4.8147 9.57921 3.76373C8.77992 1.64323 6.10802 0.351226 5.48946 0.145083L5.05451 0L4.37565 1.35798L4.70325 1.62562C4.70692 1.62856 5.0708 1.94651 5.09505 2.42851C5.11577 2.83997 4.8902 3.28461 4.42478 3.75015C4.10158 4.07333 3.74685 4.38583 3.37127 4.71663C1.79105 6.10826 0 7.68599 0 10.6707C0 10.7117 0.000385473 10.7525 0.00115643 10.793C0.0126084 11.4516 0.15407 12.1015 0.417416 12.7053C0.680761 13.3091 1.0608 13.855 1.53571 14.3115C2.48935 15.2391 3.768 15.7568 5.09832 15.7539H8.1414L7.76576 14.9916C6.23949 11.894 7.31884 10.1213 8.68532 7.87697Z" />
+                        <path
+                          d="M13.8761 10.6368C13.8673 10.6018 13.8581 10.5667 13.8485 10.5315C13.467 9.13283 11.3553 7.33441 11.1158 7.13395L10.6348 6.73145L10.3194 7.27358C9.60069 8.50931 8.98388 9.63641 8.71499 10.9151C8.40841 12.3733 8.61478 13.8554 9.34608 15.446L9.48753 15.7538H9.84695C10.48 15.7557 11.105 15.6121 11.6739 15.3343C12.2427 15.0565 12.7402 14.6518 13.1279 14.1514C13.5133 13.6619 13.7812 13.0904 13.9109 12.4811C14.0406 11.8718 14.0287 11.2408 13.8761 10.6368Z" />
+                      </svg>
+                      <span>Popular</span>
+                    </div>
+                  </figure>
+                  <div class="card__details">
+                    <span>$5,970</span>
+                    <h3 class="h5">Tranquil Haven in the Woods</h3>
+                    <p>
+                      103 Wright CourtBurien, WA 98168
+                    </p>
+                    <div class="card__features">
+                      <div class="card__feature">
+                        <img src="images/bed.svg" alt="Bedroom Icon" class="card__icon">
+                        <span>4 Beds</span>
+                      </div>
+                      <div class="card__feature">
+                        <img src="images/bath.svg" alt="Bathroom Icon" class="card__icon">
+                        <span>3 Bath</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-4">
+                <article class="card">
+                  <figure class="bg-image">
+                    <img src="images/serene-retreat.jpg" alt="image description">
+                    <div class="tag tag-newlist">
+                      <svg width="14" height="15" viewBox="0 0 14 15" fill="#119BFF" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.6771 5.98999L7.47119 0.280581C7.26944 0.0949719 7.00377 -0.00547675 6.72969 0.000230542C6.45561 0.00593784 6.19434 0.117359 6.0005 0.311206L0.292906 6.01883L0 6.31171V14.7259H5.5V9.47593H8.5V14.7259H14V6.28711L13.6771 5.98999Z" />
+                      </svg>
+                      <span>New Listing</span>
+                    </div>
+                  </figure>
+                  <div class="card__details">
+                    <span>$ 1,970</span>
+                    <h3 class="h5">Serene Retreat by the Lake</h3>
+                    <p>
+                      1964 Jehovah Drive, VA 22408
+                    </p>
+                    <div class="card__features">
+                      <div class="card__feature">
+                        <img src="images/bed.svg" alt="Bedroom Icon" class="card__icon">
+                        <span>3 Beds</span>
+                      </div>
+                      <div class="card__feature">
+                        <img src="images/bath.svg" alt="Bathroom Icon" class="card__icon">
+                        <span>2 Bath</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-4">
+                <article class="card">
+                  <figure class="bg-image">
+                    <img src="images/charming-cottage.png" alt="image description">
+                    <div class="tag tag-discount">
+                      <i class="icon-usd"></i>
+                      <span>Discounted Price</span>
+                    </div>
+                  </figure>
+                  <div class="card__details">
+                    <span>$ 3,450</span>
+                    <h3 class="h5">Charming Cottage in the Meadow</h3>
+                    <p>
+                      1508 Centennial Farm RoadHarlan, 51537
+                    </p>
+                    <div class="card__features">
+                      <div class="card__feature">
+                        <img src="images/bed.svg" alt="Bedroom Icon">
+                        <span>4 Beds</span>
+                      </div>
+                      <div class="card__feature">
+                        <img src="images/bath.svg" alt="Bathroom Icon">
+                        <span>4 Bath</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-4">
+                <article class="card">
+                  <figure class="bg-image">
+                    <img src="images/grand-estate.jpg" alt="image description">
+                    <div class="tag tag-popular">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#FF1111" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M8.68532 7.87697C8.86705 7.57855 9.05488 7.26998 9.24041 6.95183C9.86138 5.88731 9.97534 4.8147 9.57921 3.76373C8.77992 1.64323 6.10802 0.351226 5.48946 0.145083L5.05451 0L4.37565 1.35798L4.70325 1.62562C4.70692 1.62856 5.0708 1.94651 5.09505 2.42851C5.11577 2.83997 4.8902 3.28461 4.42478 3.75015C4.10158 4.07333 3.74685 4.38583 3.37127 4.71663C1.79105 6.10826 0 7.68599 0 10.6707C0 10.7117 0.000385473 10.7525 0.00115643 10.793C0.0126084 11.4516 0.15407 12.1015 0.417416 12.7053C0.680761 13.3091 1.0608 13.855 1.53571 14.3115C2.48935 15.2391 3.768 15.7568 5.09832 15.7539H8.1414L7.76576 14.9916C6.23949 11.894 7.31884 10.1213 8.68532 7.87697Z" />
+                        <path
+                          d="M13.8761 10.6368C13.8673 10.6018 13.8581 10.5667 13.8485 10.5315C13.467 9.13283 11.3553 7.33441 11.1158 7.13395L10.6348 6.73145L10.3194 7.27358C9.60069 8.50931 8.98388 9.63641 8.71499 10.9151C8.40841 12.3733 8.61478 13.8554 9.34608 15.446L9.48753 15.7538H9.84695C10.48 15.7557 11.105 15.6121 11.6739 15.3343C12.2427 15.0565 12.7402 14.6518 13.1279 14.1514C13.5133 13.6619 13.7812 13.0904 13.9109 12.4811C14.0406 11.8718 14.0287 11.2408 13.8761 10.6368Z" />
+                      </svg>
+                      <span>Popular</span>
+                    </div>
+                  </figure>
+                  <div class="card__details">
+                    <span>$ 2,389</span>
+                    <h3 class="h5">Grand Estate on the Hilltop</h3>
+                    <p>
+                      103 Wright CourtBurien, WA 98168
+                    </p>
+                    <div class="card__features">
+                      <div class="card__feature">
+                        <img src="images/bed.svg" alt="Bedroom Icon" class="card__icon">
+                        <span>4 Beds</span>
+                      </div>
+                      <div class="card__feature">
+                        <img src="images/bath.svg" alt="Bathroom Icon" class="card__icon">
+                        <span>3 Bath</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="listing__btn">
+              <a href="#" class="btn btn--light">
+                View more properties
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="service">
+          <div class="container">
+            <div class="section-title">
+              <span class="text-blue">OUR SERVICES</span>
+              <h2>Donec porttitor euismod dignissim</h2>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <article class="tile">
+                  <div class="tile__icon">
+                    <img src="images/search.svg" alt="image description" class="search-icon">
+                  </div>
+                  <h3 class="h5">Buy a New Home</h3>
+                  <p>
+                    Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.
+                  </p>
+                </article>
+              </div>
+              <div class="col-4">
+                <article class="tile">
+                  <div class="tile__icon">
+                    <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      class="home-icon">
+                      <path
+                        d="M24.4464 11.2685L13.8078 1.481C13.4619 1.16281 13.0065 0.990611 12.5366 1.0004C12.0668 1.01018 11.6189 1.20119 11.2866 1.5335L1.50213 11.318L1 11.8201V26.2444H10.4286V17.2444H15.5714V26.2444H25V11.7779L24.4464 11.2685ZM12.5735 2.71432C12.5886 2.71432 12.5793 2.71758 12.5728 2.72396C12.5661 2.71758 12.5584 2.71432 12.5735 2.71432ZM23.2857 24.5302H17.2857V17.2444C17.2857 16.7898 17.1051 16.3538 16.7836 16.0323C16.4621 15.7108 16.0261 15.5302 15.5714 15.5302H10.4286C9.97392 15.5302 9.53788 15.7108 9.21639 16.0323C8.8949 16.3538 8.71429 16.7898 8.71429 17.2444V24.5302H2.71429L2.71429 12.5302L12.5735 2.74566L12.5748 2.74378L23.2857 12.5302V24.5302Z"
+                        fill="white" stroke="white" stroke-width="0.6" />
+                    </svg>
+                  </div>
+                  <h3 class="h5">Sell a House</h3>
+                  <p>
+                    Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.
+                  </p>
+                </article>
+              </div>
+              <div class="col-4">
+                <article class="tile">
+                  <div class="tile__icon">
+                    <svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      class="bed-icon">
+                      <path
+                        d="M23.3333 4.2H11.2V11.2361H9.90768V8.84444C9.90619 7.48937 9.36723 6.19023 8.40906 5.23204C7.45089 4.27385 6.15176 3.73486 4.79669 3.73333H1.86667V0H0V20.0667H1.86667V17.2817L26.1333 17.4758V20.0667H28V8.86667C27.9986 7.62942 27.5065 6.44325 26.6316 5.56839C25.7567 4.69352 24.5706 4.20141 23.3333 4.2ZM1.86667 5.6H4.79669C5.65684 5.60097 6.48148 5.9431 7.0897 6.55132C7.69792 7.15953 8.04004 7.98418 8.04102 8.84433V11.236H1.86667V5.6ZM26.1333 15.6091L1.86667 15.4149V13.1028H26.1333V15.6091ZM26.1333 11.2361H13.0667V6.06667H23.3333C24.0757 6.06752 24.7874 6.36279 25.3123 6.88771C25.8372 7.41263 26.1325 8.12432 26.1333 8.86667V11.2361Z"
+                        fill="white" />
+                    </svg>
+                  </div>
+                  <h3 class="h5">Rent a House</h3>
+                  <p>
+                    Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="neighbour">
+          <div class="container">
+            <div class="section-title">
+              <span class="text-blue">AREAS ACROSS THE TOWN</span>
+              <h2>Neighborhood Properties</h2>
+            </div>
+            <div class="row">
+              <div class="col">
+                <figure class="bg-image">
+                  <img src="images/216.jpg" alt="image description">
+                  <figcaption class="neighbour__details">
+                    <span>216</span>
+                    <p>New York City, NY</p>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col">
+                <figure class="bg-image">
+                  <img src="images/141.jpg" alt="image description">
+                  <figcaption class="neighbour__details">
+                    <span>141</span>
+                    <p>Houston, TX</p>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col column-40">
+                <figure class="bg-image">
+                  <img src="images/212.jpg" alt="image description">
+                  <figcaption class="neighbour__details">
+                    <span>212</span>
+                    <p>San Diego, CA</p>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col column-39">
+                <figure class="bg-image">
+                  <img src="images/183.jpg" alt="image description">
+                  <figcaption class="neighbour__details">
+                    <span>183</span>
+                    <p>Philadelphia, PA</p>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col column-61">
+                <figure class="bg-image">
+                  <img src="images/112.jpg" alt="image description">
+                  <figcaption class="neighbour__details">
+                    <span>112</span>
+                    <p>San Francisco, CA</p>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="team">
+          <div class="container">
+            <div class="section-title">
+              <span class="text-blue">INTORDUCE YOURSELF TO</span>
+              <h2>Our Team of Experts</h2>
+            </div>
+            <div class="row">
+              <div class="col-3">
+                <article class="block">
+                  <figure class="bg-image">
+                    <img src="images/brendon.jpg" alt="image description">
+                  </figure>
+                  <h3 class="h4">Brendon M</h3>
+                  <p>CEO & Founder</p>
+                </article>
+              </div>
+              <div class="col-3">
+                <article class="block">
+                  <figure class="bg-image">
+                    <img src="images/jodi.jpg" alt="image description">
+                  </figure>
+                  <h3 class="h4">Jodi J. Appleby</h3>
+                  <p>Real Estate</p>
+                </article>
+              </div>
+              <div class="col-3">
+                <article class="block">
+                  <figure class="bg-image">
+                    <img src="images/justin.jpg" alt="image description">
+                  </figure>
+                  <h3 class="h4">Justin S. Meza</h3>
+                  <p>Listing Agent</p>
+                </article>
+              </div>
+              <div class="col-3">
+                <article class="block">
+                  <figure class="bg-image">
+                    <img src="images/susan.jpg" alt="image description">
+                  </figure>
+                  <h3 class="h4">Susan T. Smith</h3>
+                  <p>Buyer's Agent</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="post">
+          <div class="container">
+            <div class="section-title">
+              <span class="text-blue">WHAT'S TRENDING</span>
+              <h2>Latest Blogs & Posts</h2>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <article class="blog">
+                  <figure class="bg-image">
+                    <img src="images/blog-img1.jpg" alt="image description">
+                    <figcaption>
+                      <span>28</span>
+                      <span>Tue</span>
+                    </figcaption>
+                  </figure>
+                  <div class="blog-content">
+                    <h3>Top 10 Home Buying Mistakes to Avoid</h3>
+                    <p>Etiam eget elementum elit. Aenean dignissim dapibus vestibulum</p>
+                  </div>
+                  <a href="#" aria-label="more of blog">
+                    <i class="icon-arrow-right2"></i>
+                  </a>
+                </article>
+              </div>
+              <div class="col-4">
+                <article class="blog">
+                  <figure class="bg-image">
+                    <img src="images/blog-img2.jpg" alt="image description">
+                    <figcaption>
+                      <span>08</span>
+                      <span>mon</span>
+                    </figcaption>
+                  </figure>
+                  <div class="blog-content">
+                    <h3>How to Stage Your Home for a Quick Sale</h3>
+                    <p>Nullam odio lacus, dictum quis pretium congue, vehicula venenatis nunc.</p>
+                  </div>
+                  <a href="#" aria-label="more of blog">
+                    <i class="icon-arrow-right2"></i>
+                  </a>
+                </article>
+              </div>
+              <div class="col-4">
+                <article class="blog">
+                  <figure class="bg-image">
+                    <img src="images/blog-img3.jpg" alt="image description">
+                    <figcaption>
+                      <span>26</span>
+                      <span>WED</span>
+                    </figcaption>
+                  </figure>
+                  <div class="blog-content">
+                    <h3>5 Tips for First-Time Home Sellers</h3>
+                    <p>In hac habitasse platea dictumst. Phasellus vel velit vel augue maximus.</p>
+                  </div>
+                  <a href="#" aria-label="more of blog">
+                    <i class="icon-arrow-right2"></i>
+                  </a>
+                </article>
+              </div>
+            </div>
+            <div class="carousel-indicators">
+              <button type="button" class="carousel__line active" aria-label="slide 1"></button>
+              <button type="button" class="carousel__line" aria-label="slide 2"></button>
+              <button type="button" class="carousel__line" aria-label="slide 3"></button>
+            </div>
+            <a href="#" class="btn btn--light">
+              View more blogs
+            </a>
+          </div>
+        </section>
+        <section class="testimonial">
+          <div class="container">
+            <div class="testimonial__header">
+              <div class="section-title">
+                <span class="text-blue">TESTIMONIALS</span>
+                <h2>Look What Our Customers Say!</h2>
+                <p>Fusce venenatis tellus a felis scelerisque, non pulvinar est pellentesque. </p>
+              </div>
+              <div class="testimonial__button">
+                <button type="button" aria-label="Previous testimonial">
+                  <i class="icon-arrow-left2"></i>
+                </button>
+                <button type="button" aria-label="Next testimonial">
+                  <i class="icon-arrow-right2"></i>
+                </button>
+              </div>
+            </div>
+            <div class="testimonial__items">
+              <div class="testimonial__item active">
+                <p>I highly recommend Jodi J. Appleby. She was attentive to our needs and worked tirelessly to find us
+                  the
+                  perfect home. We couldn't be happier with our new place!</p>
+                <div class="testimonial__author">
+                  <img src="images/barbara.jpg" alt="image description">
+                  <div>
+                    <span>Barbara D. Smith</span>
+                    <div class="testimonial__rating">
+                      <i class="icon-star golden"></i>
+                      <i class="icon-star golden"></i>
+                      <i class="icon-star golden"></i>
+                      <i class="icon-star golden"></i>
+                      <i class="icon-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial__item">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit ducimus vero dolores fugiat tempora
+                  sapiente omnis placeat accusamus, quibusdam excepturi illum nulla soluta beatae, hic, sint libero.
+                  Quam, vel sunt.</p>
+                <div class="testimonial__author">
+                  <img src="images/barbara.jpg" alt="image description">
+                  <div>
+                    <span>Barbara D. Smith</span>
+                    <div class="testimonial__rating">
+                      <img src="images/star.svg" alt="image description">
+                      <img src="images/star.svg" alt="image description">
+                      <img src="images/star.svg" alt="image description">
+                      <img src="images/star.svg" alt="image description">
+                      <img src="images/star.svg" alt="image description">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="agent">
+          <div class="container">
+            <div class="agent__holder">
+              <div class="agent__image--holder">
+                <div class="agent__image">
+                  <img src="images/agent.png" alt="image description">
+                </div>
+              </div>
+              <div class="agent__content">
+                <div class="section-title">
+                  <h2>Become a Agent.</h2>
+                  <p>Fusce venenatis tellus a felis scelerisque. venenatis tellus a felis scelerisque. </p>
+                </div>
+                <div class="agent__register">
+                  <a href="#" class="btn btn--light">Register Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
     <footer class="footer">
       <!-- footer content -->
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__nav footer__info">
+            <a href="/" aria-label="company-logo" class="company__logo">
+              <figure>
+                <img src="images/rezilla.svg" alt="image description">
+              </figure>
+              <span>Rezilla</span>
+            </a>
+            <ul>
+              <li>
+                <address>
+                  2728 Hickory StreetSalt
+                  Lake City, UT 84104
+                </address>
+              </li>
+              <li><a href="tel:&#57;&#49;&#49;&#57;&#49;&#56;&#49;&#51;&#50;&#51;&#50;&#51;&#48;&#57;
+                " aria-label="Call company">
+                  <svg width="17" height="17" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.5425 1.66261L15.5161 1.64609L12.1749 0L8.56855 4.8084L10.2277 7.02078C10.1781 7.85512 9.82426 8.6423 9.23324 9.23331C8.64223 9.82432 7.85504 10.1781 7.0207 10.2278L4.80836 8.56859L0 12.1748L1.6324 15.4881L1.64613 15.5161L1.66269 15.5425C1.7498 15.6829 1.87139 15.7986 2.01588 15.8787C2.16036 15.9587 2.32295 16.0005 2.48814 16H3.3503C5.01148 16 6.6564 15.6728 8.19114 15.0371C9.72587 14.4014 11.1204 13.4696 12.295 12.295C13.4696 11.1203 14.4014 9.72584 15.0371 8.1911C15.6728 6.65636 16 5.01144 16 3.35026V2.48807C16.0005 2.32287 15.9588 2.16029 15.8787 2.0158C15.7986 1.87131 15.6829 1.74972 15.5425 1.66261ZM14.7653 3.35026C14.7653 9.64451 9.64451 14.7653 3.3503 14.7653H2.65267L1.56047 12.548L4.8086 10.1119L6.61698 11.4682H6.82276C8.05445 11.4668 9.23529 10.9769 10.1062 10.106C10.9772 9.23502 11.4671 8.05418 11.4684 6.82249V6.61671L10.1122 4.80836L12.548 1.56043L14.7653 2.65283V3.35026Z"
+                      fill="#808080" />
+                  </svg>
+                  <span>+1 206-214-2298</span>
+                </a></li>
+              <li>
+                <a href="mailto:&#104;&#101;&#108;&#108;&#111;&#64;&#115;&#107;&#105;&#108;&#108;&#98;&#114;&#105;&#100;&#103;&#101;&#46;&#99;&#111;&#109;
+                      " aria-label="Send Email">
+                  <svg width="17" height="12.2" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask fill="white">
+                      <path d="M4 3.20001L8 6.00001L12 3.20001" />
+                    </mask>
+                    <path
+                      d="M4.68815 2.21693C4.14522 1.83688 3.39698 1.96892 3.01692 2.51186C2.63686 3.0548 2.76891 3.80303 3.31185 4.18309L4.68815 2.21693ZM8 6.00001L7.31185 6.98309C7.72503 7.27232 8.27497 7.27232 8.68815 6.98309L8 6.00001ZM12.6882 4.18309C13.2311 3.80303 13.3631 3.0548 12.9831 2.51186C12.603 1.96892 11.8548 1.83688 11.3118 2.21693L12.6882 4.18309ZM3.31185 4.18309L7.31185 6.98309L8.68815 5.01693L4.68815 2.21693L3.31185 4.18309ZM8.68815 6.98309L12.6882 4.18309L11.3118 2.21693L7.31185 5.01693L8.68815 6.98309Z"
+                      fill="#808080" mask="url(#path-1-inside-1_20_5)" />
+                    <path
+                      d="M0.6 9.6V1.6C0.6 1.04771 1.04771 0.6 1.6 0.6H14.4C14.9523 0.6 15.4 1.04771 15.4 1.6V9.6C15.4 10.1523 14.9523 10.6 14.4 10.6H1.6C1.04771 10.6 0.6 10.1523 0.6 9.6Z"
+                      stroke="#808080" stroke-width="1.2" />
+                  </svg>
+                  <span>@rezilla.com</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__nav footer__nav--alt">
+            <strong>Quick Links</strong>
+            <ul>
+              <li><a href="#" aria-label="go to company's homepage">Home</a></li>
+              <li><a href="#" aria-label="go to about">About</a></li>
+              <li><a href="#" aria-label="go to property listings section">Listings</a></li>
+              <li><a href="#" aria-label="go to service section">Services</a></li>
+              <li><a href="#" aria-label="go to blogs section">Blogs</a></li>
+              <li><a href="#" aria-label="go to agent registration section">Become a Agent</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav footer__nav--alt">
+            <strong>Discovery</strong>
+            <ul>
+              <li><a href="#" aria-label="Explore properties in Canada">Canada</a></li>
+              <li><a href="#" aria-label="Explore properties in the United States">United States</a></li>
+              <li><a href="#" aria-label="Explore properties in Germany">Germany</a></li>
+              <li><a href="#" aria-label="Explore properties in Africa">Africa</a></li>
+              <li><a href="#" aria-label="Explore properties in India">India</a></li>
+            </ul>
+          </div>
+          <div class="footer__social">
+            <div class="footer__nav">
+              <strong>Subscribe to our Newsletter</strong>
+              <div>
+                <button type="submit" class="submit-btn" aria-label="submit email address">
+                  <i class="icon-arrow-right2"></i>
+                </button>
+                <label for="emailAddress" class="visually-hidden">Enter email:</label>
+                <input id="emailAddress" type="email" placeholder="Email Address">
+              </div>
+            </div>
+            <div class="footer__nav">
+              <strong>Follow Us on</strong>
+              <ul>
+                <li>
+                  <a href="#" aria-label="go to linkedin">
+                    <i class="icon-linkedin2"></i>
+                  </a>
+                </li>
+                <li><a href="#" aria-label="go to facebook">
+                    <i class="icon-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="go to instagram">
+                    <i class="icon-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__policy">
+        <div class="container">
+          <p>&copy;<a href="/"> Rezilla</a>- All rights reserved</p>
+          <div>
+            <ul>
+              <li>
+                <a href="#">Terms and Conditions</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#">Disclaimer</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
   </div>
 </body>

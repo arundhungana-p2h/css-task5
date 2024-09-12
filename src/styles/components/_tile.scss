@@ -1,0 +1,56 @@
+.tile{
+    padding: 40px 46px 32px 47px ;
+    text-align: center;
+    background-color: $white;
+    margin-bottom:30px ;
+    border-radius: 20px;
+    box-shadow:4px 10px 30px 0 $black-op3 ;
+    @include media('screen','>=desktop'){
+        border-radius: 30px;
+        padding-top: 61px;
+        padding-bottom: 58px
+    }
+    &__icon{
+        @include size(60px);
+        display: inline-flex;
+        align-items: center;
+        justify-content:center;
+        background-color: $blue-400;
+        border-radius: $rounded-circle;
+        box-shadow: 4px 10px 30px 0 $blue-400-op40;
+        margin-bottom: 15px;
+        @include media('screen','>=desktop'){
+            @include size(90px);
+            margin-bottom: 22px;
+        }
+        .search-icon{
+            @include media('screen','>=desktop'){
+                @include size(40px)
+            }
+        }
+        .home-icon{
+            @include media('screen','>=desktop'){
+                width: 40px;
+                height: 42px;
+            }
+        }
+        .bed-icon{
+            @include media('screen','>=desktop'){
+                width: 48px;
+                height: 34.4px;
+            }
+        }
+    }
+    .h5{
+        margin-bottom: 2px;
+        @include media('screen','>=desktop'){
+            margin-bottom: 7px;
+        }
+    }
+    p{
+        margin-bottom: 0;
+        @include media('screen','>=desktop'){
+            padding: 0 15px;
+        }
+    }
+}

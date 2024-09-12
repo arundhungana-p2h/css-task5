@@ -23,3 +23,19 @@ html {
 *::after {
   box-sizing: inherit;
 }
+img{
+  max-width: 100%;
+  display: block;
+}
+address {
+  font-style:normal;
+  color:$gray-400;
+}
+figure {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}

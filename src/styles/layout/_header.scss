@@ -1,3 +1,140 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site
 // -----------------------------------------------------------------------------
+.header{
+    padding: 20px 0;
+    @include media('screen','>=tablet'){
+        padding: 0;
+    }
+    &__top{
+            display: none;
+            @include media('screen','>=tablet'){
+                display: block;
+                background-color: $blue-500;
+            }
+            address,a{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: white;
+                font-size: 13.3px;
+                line-height: 22px;
+            }
+            .container{
+                @include media('screen','>=tablet'){
+                display: flex;
+                justify-content: space-between;
+                padding:9px 100px ;
+                color: $white;
+              }}
+              &--details{
+                display: flex;
+                column-gap:35px;
+                row-gap: 10px;
+                max-width: 400px;
+              }
+        }
+    &__bottom{
+        .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;}
+        @include media('screen','>=tablet'){
+            padding: 15px 0;
+        }
+        .container{
+            @include media('screen','>=desktop'){
+                padding: 0 100px;
+            }
+        }
+    }
+}
+.navbar{
+    @include media('screen','>=desktop'){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1240px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    &__menu{
+        display: none;
+        @include media('screen','>=desktop'){
+            display: flex;
+            flex-wrap: wrap;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            li{
+                border-radius: 30px;
+            }
+            li>a{
+                display: inline-block;
+                text-align: center;
+                padding: 8px 16px;
+                border-radius: 30px;
+                &:hover{
+                    background-color:$btn-hover;
+                    color: $white;
+                }
+            }
+            .active{
+                background-color: $blue-400-op30;
+            }
+        }
+        }
+        &__actions{
+            display: none;
+            @include media('screen','>=desktop'){
+                display: flex;
+                padding-left: 89px;
+                flex-shrink: 0;
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                gap:22px;
+                flex-shrink: 0;
+                li{
+                    flex-shrink: 0;
+                }
+                li>a{
+                    display: flex;
+                    align-items: center;
+                    gap:10px ;
+                    &:hover{
+                        color: $blue-500;
+                    }
+                }
+                .btn--primary{
+                    padding: 12px 26px;
+                }
+            }
+        }
+}
+.hamburger-menu{
+    display:block;
+    cursor: pointer;
+    line-height: 0;
+    @include media('screen','>=desktop'){
+        display: none;
+    }
+    button{
+        border: none;
+        padding: 0;
+        background-color: $white;
+    }
+    .hamburger-icon{
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color:$primary;
+        margin-bottom: 7.64px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}

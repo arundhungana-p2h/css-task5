@@ -1,0 +1,46 @@
+.tag {
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    gap:10px ;
+    padding: 6px 24px;
+    border: 1px solid var(--color-gray-300);
+    border-radius: 20px;
+    @include media('screen','>=desktop'){
+      padding: 9px 25px;
+    }
+    &-popular{
+      background-color:$red-100 ;
+      color:$red-200;
+      svg{
+        @include media('screen','>=desktop'){
+          width: 20px;
+          height: 22px;
+        }
+      }
+    }
+    &-newlist{
+      background-color:$blue-100 ;
+      color:$blue-300;
+      svg{
+        @include media('screen','>=desktop'){
+          width: 20px;
+          height: 21px;
+        }
+      }
+    }
+    &-discount{
+      background-color:$green-100 ;
+      color:$green-200;
+      i.icon-usd{
+        height: 14px;
+        width: auto;
+        font-weight: $font-weight-bold;
+        @include media('screen','>=desktop'){
+          height: 20.3px;
+          width: 12px;
+        }
+      }
+    }
+
+  }

@@ -1,3 +1,237 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site
 // -----------------------------------------------------------------------------
+.footer{
+    background-color:$blue-400-op10;
+    padding-top: 60px;
+    @include media('screen','>=desktop'){
+        padding-top: 82px;
+    }
+    .company__logo{
+        justify-content: center;
+        margin-bottom: 25px;
+        @include media('screen','>=desktop'){
+            justify-content: flex-start;
+            margin-bottom: 26px;
+        }
+    }
+    &__content{
+        text-align: center;
+        padding-bottom: 44px;
+        @include media('screen','>=desktop'){
+            display: flex;
+            flex-wrap: wrap;
+            text-align: left;
+            padding-bottom: 59px;
+        }
+    }
+    &__nav{
+        margin-bottom: 40px;
+        @include media('screen','>=desktop'){
+            padding-right: 15px;
+        }
+        a,address,strong{
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: $font-weight-medium;
+        }
+        strong{
+            display: inline-block;
+            color: $gray-400;
+            max-width: 206px;
+            margin: 0 auto 12px;
+            @include media('screen','>=desktop'){
+                font-size: 19.4px;
+                margin-bottom: 27px;
+            }
+        }
+        a,address{
+            color: $gray-300;
+            max-width: 224px;
+            margin: 0 auto;
+            &:hover{
+                cursor: pointer;
+                color:$blue-500;
+            }
+            @include media('screen','>=desktop'){
+                max-width:218px;
+                margin: 0;
+            }
+        }
+        address{
+            padding: 0 8px;
+            @include media('screen','>=desktop'){
+                padding: 0;
+            }
+        }
+        li{
+            margin-bottom: 20px;
+            @include media('screen','>=desktop'){
+                margin-bottom: 6px;
+            }
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &--alt{
+        display: none;
+        @include media('screen','>=desktop'){
+            display: block;
+            width: 21.8%;
+            padding-top: 10px;
+        } 
+        &:nth-child(3){
+            width: 18.5%;
+        }
+    }
+}
+    &__info{
+        margin-bottom: 28px;
+        @include media('screen','>=desktop'){
+            width: 28.4%;
+        }
+        li{
+            @include media('screen','>=desktop'){
+                margin-bottom: 40px;
+            }
+        a{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            @include media('screen','>=desktop'){
+                justify-content: flex-start;
+                gap: 11px;
+            }
+        }
+        svg{
+            @include media('screen','>=desktop'){
+                width: 20px;
+                height: auto;
+            }
+        }
+        &:nth-child(2){
+            margin-bottom: 10px;
+            @include media('screen','>=desktop'){
+                margin-bottom: 22px;
+            }
+        }
+    }
+    }
+    &__social{
+        @include media('screen','>=desktop'){
+            width: 31.3%;
+            padding-top: 10px;
+        }
+        .footer__nav{
+            padding-right: 0;
+        }
+        & > div:first-child{
+            margin-bottom: 33px;
+            @include media('screen','>=desktop'){
+                margin-bottom: 25px;
+            }
+            &>strong{
+                margin-bottom: 13px;
+            }
+            div{
+                position: relative;
+            .submit-btn{
+                position: absolute;
+                right: 5px;
+                top: 5px;
+                bottom: 5px;
+                background-color: $blue-500;
+                color: $white;
+                font-size: 18px;
+                padding: 15px;
+                border-radius: $rounded-circle;
+                border: 1px solid $blue-500
+            }
+    }
+    input{
+        @include make-font-size((16px,26px));
+        background-color: $white;
+        border-radius: 100px;
+        color: $gray-300;
+        padding-right: 72px;
+        height: 60px;
+    }
+
+}
+    & >div:last-child{
+        margin-bottom: 0;
+        strong{
+            margin-bottom: 26px;
+            @include media('screen','>=desktop'){
+                margin-bottom: 22px;
+            }
+        }
+        &>ul{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px 35px;
+        @include media('screen','>=desktop'){
+            gap: 15px 16px;
+            justify-content: flex-start;
+        }
+    }
+        li{
+            margin-bottom: 0;
+        }
+        i{
+            color:$blue-500;
+            font-size:22px
+        }
+    }
+}
+    &__policy{
+        background-color:$primary ;
+        .container{
+        @include media('screen','>=desktop'){
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 160px;
+        }}
+        p{
+            text-align: center;
+            padding: 9px 0 9px 8px;
+            margin-bottom: 0;
+            color: $gray-200;
+            @include media('screen','>=desktop'){
+                padding: 0;
+            }
+            a{
+                color: $gray-300;
+                &:hover{
+                    color:$blue-100;
+                }
+                @include media('screen','>=desktop'){
+                    color: $gray-200;
+                }
+            }
+        }
+        .container{
+        div{
+            display: none;
+            @include media('screen','>=desktop'){
+                display: block;
+                &>ul{
+                    display: flex;
+                    row-gap: 10px;
+                    column-gap: 41px ;
+                    a{
+                        color: $gray-200;
+                        &:hover{
+                            color:$blue-100;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }
+}

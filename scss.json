@@ -1,0 +1,17 @@
+{
+    "media phone":{
+        "prefix":"phone",
+        "body":["@include media('screen',>=phone){}"],
+        "description":"getting media for phone"
+    },
+    "media tablet":{
+        "prefix":"tablet",
+        "body":["@include media('screen',>=tablet){}"],
+        "description":"getting media for tablet"
+    },
+    "media desktop":{
+        "prefix":"desktop",
+        "body":["@include media('screen',>=desktop){}"],
+        "description":"getting media for desktop"
+    }
+}  

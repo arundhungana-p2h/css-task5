@@ -201,3 +201,20 @@
     font-size: $fs-font-size;
   }
 }
+
+//Create the circular gradient design
+@mixin circle-gradient(
+  $background: linear-gradient(to bottom, rgba(67, 97, 238, 1) 0%, rgba(58, 12, 163, 0) 100%),
+  $opacity: .5,
+  $z-index: 2,
+  $transform: rotate(30deg)
+) {
+  content: '';
+  position: absolute;
+  background: $background;
+  opacity: $opacity;
+  z-index: $z-index;
+  transform: $transform;
+  border-radius: $rounded-circle;
+}
+

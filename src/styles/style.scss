@@ -22,9 +22,13 @@
 
 // 5. Components
 @import 'components/button';
-
+@import 'components/tag';
+@import 'components/card';
+@import 'components/tile';
+@import 'components/blog';
+@import 'components/block';
 // 6. Page-specific styles
-// @import 'pages/home';
+@import 'pages/home';
 
 // 7. Themes
 // @import 'themes/themes';

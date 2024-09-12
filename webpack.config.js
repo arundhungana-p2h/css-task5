@@ -1,5 +1,5 @@
 const { existsSync } = require('fs');
-const { resolve, join, posix, dirname, basename, parse } = require('path')
+const { resolve, join, posix, dirname, basename, parse } = require('path');
 const readdir = require('@jsdevtools/readdir-enhanced');
 const webpack = require('webpack');
 const ErrorsPlugin = require('@soda/friendly-errors-webpack-plugin');
@@ -13,7 +13,7 @@ const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const ESLintPlugin = require('eslint-webpack-plugin');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const config = require('./config.json');
 
 const SRC = config.src;
@@ -77,7 +77,7 @@ const pluginsConfiguration = {
       'Access-Control-Allow-Origin': '*',
     },
     client: {
-      logging: 'none'
+      logging: 'none',
     },
   },
   BrowserSync: config.browsersync,
@@ -113,24 +113,22 @@ const pluginsConfiguration = {
         // Lossless optimization with custom option
         // Feel free to experiment with options for better result for you
         plugins: [
-          ["gifsicle", { interlaced: true }],
-          ["mozjpeg", { progressive: true }],
-          ["optipng", { optimizationLevel: 5 }],
+          ['gifsicle', { interlaced: true }],
+          ['mozjpeg', { progressive: true }],
+          ['optipng', { optimizationLevel: 5 }],
           // Svgo configuration here https://github.com/svg/svgo#configuration
           [
-            "svgo",
+            'svgo',
             {
               plugins: [
                 {
-                  name: "preset-default",
+                  name: 'preset-default',
                   params: {
                     overrides: {
                       removeViewBox: false,
                       addAttributesToSVGElement: {
                         params: {
-                          attributes: [
-                            { xmlns: "http://www.w3.org/2000/svg" },
-                          ],
+                          attributes: [{ xmlns: 'http://www.w3.org/2000/svg' }],
                         },
                       },
                     },
@@ -172,7 +170,7 @@ const generateHtmlPlugins = () => {
     return new HTMLWebpackPlugin({
       title: basename(dirname(__dirname)),
       template,
-      filename
+      filename,
     });
   });
 };
@@ -228,7 +226,7 @@ const getPlugins = () => {
     return defaultPlugins.concat(htmlPlugins());
   }
 
-  return defaultPlugins
+  return defaultPlugins;
 };
 
 const getTemplatesLoader = (templateType) => {
@@ -239,20 +237,16 @@ const getTemplatesLoader = (templateType) => {
   if (PUG.test(templateType)) {
     return {
       test: /.pug$/,
-      exclude: [
-        resolve(__dirname, 'src/views/_utils'),
-        resolve(__dirname, 'src/views/_includes'),
-        resolve(__dirname, 'src/views/_layout')
-      ],
+      exclude: [resolve(__dirname, 'src/views/_utils'), resolve(__dirname, 'src/views/_includes'), resolve(__dirname, 'src/views/_layout')],
       use: [
         'raw-loader',
         {
           loader: 'pug-html-loader',
           options: {
             basedir: join(config.src, config.templates.src),
-          }
-        }
-      ]
+          },
+        },
+      ],
     };
   }
 
@@ -275,7 +269,7 @@ const getTemplatesLoader = (templateType) => {
               helpers.forEach((file) => {
                 // pushing helper file to context and force plugin to rebuild templates on helpers changes
                 // fixing issue, when path inside helpers was changed, but compiler didn't noticed about those changes to the path
-                context.addDependency(resolve(__dirname,join(config.src, config.templates.src, file)));
+                context.addDependency(resolve(__dirname, join(config.src, config.templates.src, file)));
               });
 
               context.addDependency(data); // Force webpack to watch file
@@ -303,22 +297,22 @@ const getScriptsLoader = (templateType) => {
       // /node_modules\/(?!(module_to_include)\/).*/
       test: /\.tsx?$/,
       exclude: /node_modules/,
-      rules:[
+      rules: [
         {
           use: ['awesome-typescript-loader'],
-        }
-      ]
+        },
+      ],
     };
   }
 
   return {
     test: /\.m?js$/,
     exclude: /node_modules/,
-    rules:[
+    rules: [
       {
         use: ['babel-loader'],
-      }
-    ]
+      },
+    ],
   };
 };
 
@@ -342,7 +336,7 @@ const getModules = () => {
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: { url: false }
+            options: { url: false },
           },
           {
             loader: 'postcss-loader',
@@ -354,13 +348,13 @@ const getModules = () => {
                     config.minimizeCSS && isProduction
                       ? false
                       : {
-                        cascade: false,
-                        colorShorthand: false,
-                        indentSize: 2,
-                        maxSelectorLength: false,
-                        maxAtRuleLength: false,
-                        maxValueLength: false,
-                      },
+                          cascade: false,
+                          colorShorthand: false,
+                          indentSize: 2,
+                          maxSelectorLength: false,
+                          maxAtRuleLength: false,
+                          maxValueLength: false,
+                        },
                 },
                 config: true,
               },

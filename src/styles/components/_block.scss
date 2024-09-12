@@ -1,0 +1,39 @@
+.block{
+    margin-bottom: 44px;
+    text-align: center;
+    .bg-image{
+        padding-top: 139%;
+        margin-bottom: 9px;
+        &::before{
+            opacity: 0.4;
+            border-radius:80px 20px 20px 20px ;
+        }
+        @include media('screen','>=desktop'){
+            padding-top: 137%;
+            margin-bottom: 20px;
+            &::before{
+                border-radius: 120px 40px 40px 40px;
+            }
+        }
+        img{
+            border-radius: 80px 20px 20px 20px;
+            @include media('screen','>=desktop'){
+                border-radius: 120px 40px 40px 40px;
+            }
+        }
+    }
+    .h4{
+        color:$primary;
+        font-weight: $font-weight-normal;
+        margin-bottom: 2px;
+        @include media('screen','>=desktop'){
+            font-weight: $font-weight-semibold;
+            margin-bottom: 12px;
+            font-size: 26px;
+        }
+    }
+    p{
+        color: $blue-400;
+        margin-bottom: 0;
+    }
+}

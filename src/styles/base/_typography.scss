@@ -13,20 +13,66 @@
   Basic typography style for copy text
 */
 body {
+  @include font-size(map-get($font-sizes,'base'));
   @include font-smoothing;
-  color: $body-color;
+  color: $gray-300;
   font-family: $font-family-base;
-  font-size: map-get($font-sizes, 'base');
   line-height: $line-height-base;
   font-weight: $font-weight-normal;
+  padding: 0;
 }
-
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  line-height: $line-height-base;
+  font-weight:$font-weight-semibold;
+  font-family:$font-family-sans-serif;
+  margin: 0 0 0.5em 0;
+  color: $primary;
+}
+h1,
+.h1 {
+  @include font-size(map-get($headings-sizes,'h1'))
+}
+h2,
+.h2 {
+  @include font-size(map-get($headings-sizes,'h2'));
+  color: $gray-400;
+}
+h3,
+.h3 {
+  @include font-size(map-get($headings-sizes,'h3'));
+  color:$white;
+}
+h4,
+.h4 {
+  @include font-size(map-get($headings-sizes,'h4'));
+}
+h5,
+.h5 {
+  @include font-size(map-get($headings-sizes,'h5'))
+}
+h6,
+.h6 {
+  font-size:map-get($headings-sizes,'h6');
+  color: $gray-400;
+}
 /*
   Basic styles for links
 */
 a {
-  @include transition(color);
-  color: $link-color;
+  @include transition((color, opacity, background, border, visibility,
+  box-shadow, width, left, right, transform));
+  color: $gray-400;
   text-decoration: $link-decoration;
 
   &:hover {
@@ -35,9 +81,3 @@ a {
   }
 }
 
-ul,
-ol,
-dl,
-p {
-  margin: 0 0 $paragraph-margin-bottom;
-}

@@ -19,38 +19,48 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
+ /* Enable Ligatures ================ */
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.icon-chevron-down {
+.icon-usd{
   &::before {
-    content: $icon-chevron-down;
-  }
+    content:$icon-usd;
+    }
 }
-
-.icon-cross {
+.icon-search {
   &::before {
-    content: $icon-cross;
-  }
+    content:$icon-search;
+    }
 }
-
-.icon-chevron-up {
+.icon-star {
   &::before {
-    content: $icon-chevron-up;
-  }
+    content:$icon-star;
+    }
 }
-
-.icon-chevron-left {
+.icon-arrow-right2{
   &::before {
-    content: $icon-chevron-left;
-  }
+    content:$icon-arrow-right2;
+    }
 }
-
-.icon-chevron-right {
+.icon-arrow-left2{
   &::before {
-    content: $icon-chevron-right;
-  }
+    content:$icon-arrow-left2;
+    }
+}
+.icon-facebook{
+  &::before {
+    content:$icon-facebook;
+    }
+}
+.icon-instagram{
+  &::before {
+    content:$icon-instagram;
+    }
+}
+.icon-linkedin2{
+  &::before {
+    content:$icon-linkedin2;
+    }
 }

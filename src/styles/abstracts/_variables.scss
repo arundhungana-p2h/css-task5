@@ -27,10 +27,37 @@ $media-expressions: (
 );
 
 // Color system
-
+$primary:#0B090A;
 $white: #fff;
+$white-op50: #ffffff80;
 $black: #000;
-
+$black-100:#0B090A;
+$black-op10: #0000001A;
+$black-op3:#00000008;
+$black-op6:#0000000F;
+$yellow-100:#FFC700;
+$blue-100:#D7EEFF;
+$blue-200:#4CC9F0;
+$blue-300:#119BFF;
+$blue-400:#4361EE;
+$blue-400-op10:#4361EE1A;
+$blue-400-op30:#4361EE4D;
+$blue-400-op40:#4361EE66;
+$blue-500:#3A0CA3;
+$purple-100:#7209B7;
+$gray-100:#D4D4D4;
+$gray-100-op20:#D4D4D433;
+$gray-100-op30:#D4D4D44D;
+$gray-200:#AAAAAA;
+$gray-300:#808080;
+$gray-400:#2B2B2B;
+$red-100:#FFE1E1;
+$red-200:#FF1111;
+$green-100:#F1FFF1;
+$green-200:#00CE3A;
+$border-gray:#BFBDC1;
+$bg-gray:#D9D9D9;
+$btn-hover:#2176FF;
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
 $yiq-contrasted-threshold: 150;
 
@@ -41,15 +68,12 @@ $yiq-text-light: $white;
 // body
 //
 // settings for the `<body>` element.
-
 $body-bg: $white;
 $body-color: $black;
-
 $link-color: #0366d6;
 $link-decoration: none;
 $link-hover-color: darken(#0366d6, 5%); /* stylelint-disable-line */
 $link-hover-decoration: none;
-
 // border radius
 $rounded-circle: 50%;
 
@@ -58,13 +82,11 @@ $rounded-circle: 50%;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+$font-family-sans-serif:'Poppins','Helvetica Neue', Arial, 'Noto Sans', sans-serif;
 $font-family-sans-serif-secondary: $font-family-sans-serif;
 $font-family-base: $font-family-sans-serif;
 $base-font-path: '../fonts';
-
 $line-height-base: 1.5;
-
 $font-weight-thin: 100;
 $font-weight-ulight: 200;
 $font-weight-light: 300;
@@ -76,19 +98,37 @@ $font-weight-heavy: 800;
 $font-weight-black: 900;
 
 $font-sizes: (
-  'xl': 18px,
-  'lg': 16px,
-  'base': 14px,
-  'md': 12px,
-  'sm': 10px,
+  'xl': 20px,
+  'lg': 19.4px,
+  'base':(
+    'xs-phone':(13.3px,22px),
+    'desktop':(16px,24px)
+  ),
+  'md':13.3px,
+  'sm': 12px,
 );
 
-$headings-sizes: (
-  'h1': 30px,
-  'h2': 26px,
-  'h3': 22px,
-  'h4': 20px,
-  'h5': 18px,
+$headings-sizes:(
+  'h1':(
+      'xs-phone':(39.8px,47px),
+      'desktop':(57.3px,65px)
+  ),
+  'h2':(
+    'xs-phone':27.6px,
+    'desktop':(39.8px,47px)
+  ),
+  'h3': (   
+    'xs-phone':19.4px,
+    'desktop':27.6px
+    ),
+  'h4':(
+    'xs-phone':16px,
+    'desktop':27.6px
+  ),
+  'h5':(
+    'xs-phone':16px,
+    'desktop':19.4px
+  ),
   'h6': 16px,
 );
 

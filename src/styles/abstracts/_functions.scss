@@ -96,6 +96,7 @@
 ///     background: black(0.15);
 ///     color: white(0.9);
 ///   }
+///
 @function black($opacity) {
   @return rgba(black, $opacity);
 }

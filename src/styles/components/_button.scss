@@ -2,3 +2,31 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+.btn {
+  @include transition((color, opacity, background, border, visibility,
+  box-shadow, width, left, right, transform));
+   display: inline-block;
+    font-weight:$font-weight-medium;
+    font-size: 16px; 
+    line-height: 1.5;
+    text-align: center;
+    padding: 12px 30px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color:$white;
+    &--primary{
+        color:$white;
+        background-color:$blue-500;
+        border-color:$blue-500 ;
+      }
+    &--light{
+          color:$blue-500;
+          background-color: $white;
+          border-color:$blue-500 ;
+      }
+    &:hover{
+        color:$blue-500;
+        background-color:$blue-300;
+        border-color: $blue-300;
+    }
+  }

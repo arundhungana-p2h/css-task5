@@ -1,0 +1,87 @@
+.card{
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    .bg-image{
+        padding-top: 66%;
+        margin-bottom: 18px;
+        @include media('screen','>=desktop'){
+            padding-top: 100.6%;
+            margin-bottom: 28px;
+        }
+        &:not(:has(.tag-popular)){
+            &::before{
+            background: none;
+            opacity: 0;}
+        }
+        .tag{
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 10;
+            @include media('screen','>=desktop'){
+                bottom: 31px;
+                left: 30px;
+            }
+        }
+    }
+    &__details{
+        margin-top: auto;
+        &>span{
+         @include font-size(map-get($headings-sizes,'h3'));
+          display: block;
+          color:$gray-400;
+          margin-bottom: 4px;
+          @include media('screen','>=desktop'){
+            margin-bottom: 11px;
+          }
+        }
+        .h5{
+            margin-bottom:3px;
+            @include media('screen','>=desktop'){
+                margin-bottom: 5px;
+            }
+        }
+        p{
+            margin-bottom: 6px;
+            @include media('screen','>=desktop'){
+                margin-bottom: 11px;
+            }
+        }
+    }
+    &__features{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+        @include media('screen','>=desktop'){
+            column-gap: 22px;
+        }
+    }
+    &__feature{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        span{
+            font-size:13.3px;
+            line-height: 22px;
+            @include media('screen','>=desktop'){
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+        &:first-child{
+            img{
+                @include media('screen','>=desktop'){
+                width: 30px;
+                height: 21.5px;}
+            }
+        }
+        &:last-child{
+            img{
+                @include media('screen','>=desktop'){
+                    @include size(24px)
+                }
+            }
+        }
+    }
+}
